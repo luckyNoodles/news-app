@@ -1,8 +1,15 @@
 import { useEffect, useState } from 'react';
 import './App.scss';
+import NavBar from './Components/NavBar.js';
+import Story from './Components/Story';
 
 function App() {                    
-  const [stories, setStories] = useState([]);
+  const [stories, setStories] = useState('');
+  const storyData = stories.results;
+//  console.log(storyData[5].multimedia);
+  
+ const image = storyData[5].multimedia;
+ console.log(image[1].url);
 
   useEffect(() => {
 
@@ -27,12 +34,19 @@ function App() {
     
 
   },[]);
-  console.log(stories);
+  // console.log(stories);
+  
+  
 
   return (
     <div className="App">
       <header className="App-header">
+        <NavBar />
         <h2>Breaking News</h2>
+        <Story />
+
+
+
       </header>
     </div>
   );
