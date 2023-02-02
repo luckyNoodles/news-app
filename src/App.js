@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import './App.scss';
 
-function App() {
+function App() {                    
   const [stories, setStories] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,7 @@ function App() {
         const resultsArray = response;
         // console.log(response);
         setStories(resultsArray);
+        // console.log(stories);
 
       } catch (error) {
         console.log(error);
@@ -23,10 +24,10 @@ function App() {
     } 
     
     fetchData();
-    console.log(stories);
+    
 
   },[]);
-  
+  console.log(stories);
 
   return (
     <div className="App">
