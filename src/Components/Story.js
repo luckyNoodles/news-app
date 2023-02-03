@@ -1,21 +1,33 @@
 function Story (storyData) {
 
     // console.log(storyData);
-    const story = storyData;
-    // const image = story;
-    console.log(story.data[3]);
-    // console.log(storyData.stories);
-
-
+    const storiesArray = storyData.data.results;
+    const story1 = storiesArray[5];
+    const storyImageArray = story1.multimedia[1];
 
     return (
-        <div>
-            <h2>Story Component</h2>
-            <div className="imageContainer">
-                {/* <img src={image} alt="image" /> */}
-            </div>
-        
+        <div className="storyComponent">
+                       
+            <div className="storyBox">
+               
+                <div className="imageContainer">
+                    <a href={ story1.url } >
+                        <img src={ storyImageArray.url } alt={ storyImageArray.type } />
+                    </a>
+                </div>
 
+                <div className="storyText">
+                    <div className="title">
+                        <a href={ story1.url }>
+                            <h3>{ storiesArray[5].title }</h3>
+                        </a>
+                    </div>
+                    <div className="description">
+                        <p> { storiesArray[5].abstract }</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
         
     )

@@ -9,7 +9,7 @@ const Home = () => <h2>Home</h2>
 
 function App() {                    
   const [stories, setStories] = useState('');
-  const storyData = stories.results;
+  const storyData = stories;
   // console.log(storyData);
 
 
