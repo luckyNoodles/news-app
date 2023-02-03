@@ -18,13 +18,19 @@
     .storyText {
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
+        // border: 1px solid black;
         .title {
-            border: 1px solid black;
+            padding: 10px;
+            // border: 1px solid black;
+            a {
+                text-decoration: none;
+                    color: black;
+            }
             
         }
         .description {
-            border: 1px solid black;
+            padding: 10px;
+            // border: 1px solid black;
         }
     }
 }

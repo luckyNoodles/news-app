@@ -1,6 +1,6 @@
 function Story (storyData) {
 
-    // console.log(storyData);
+    console.log(storyData);
     const storiesArray = storyData.data.results;
     const story1 = storiesArray[5];
     const storyImageArray = story1.multimedia[1];
