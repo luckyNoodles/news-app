@@ -1,8 +1,9 @@
 function Story (storyData) {
 
     // console.log(storyData);
-    // const story = storyData[1];
+    const story = storyData;
     // const image = story;
+    console.log(story.data[3]);
     // console.log(storyData.stories);
 
 

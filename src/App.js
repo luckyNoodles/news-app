@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.scss';
 import NavBar from './Components/NavBar.js';
 import Story from './Components/Story';
 
+//Mock components
+const Home = () => <h2>Home</h2>
+
 function App() {                    
   const [stories, setStories] = useState('');
   const storyData = stories.results;
-//  console.log(storyData[5].multimedia);
-  
- const image = storyData[5].multimedia;
- console.log(image[1].url);
+  // console.log(storyData);
+
 
   useEffect(() => {
 
@@ -41,13 +43,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar />
-        <h2>Breaking News</h2>
-        <Story />
+        <div className="App-wrapper">
 
+          <Routes> 
+            <Route path="/" element={ <Home /> } />
+          </Routes>
 
+             <NavBar /> 
 
+        </div>
       </header>
+            <h2>Breaking News</h2>
+            <Story data={ storyData } />
+
+        
+     
     </div>
   );
 }
