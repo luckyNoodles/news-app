@@ -1,8 +1,33 @@
+.headerTitle {
+    display: flex;
+    justify-content: center;
+    // border: 1px solid red;
+    margin-top: 2%;
+    margin-bottom: 0;
+    border-bottom: 1px solid lightgray;
+}
+
 .navBar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    border-bottom: 1px double black;
+    border-width: 5px;
+    padding: 0;
+    margin: 3px;
+    // border: 1px solid red;
     li {
         list-style: none;
+        margin: 5px auto;
+        a {
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            margin: 3px;
+            padding: 2px;
+            font-size: 0.5rem;
+            font-weight: bold;
+            
+        }
        
     }
 }
