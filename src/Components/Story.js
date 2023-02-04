@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react';
 
 function Story ({api}) {
+     console.log(api);
     const [stories, setStories] = useState([]);
-    console.log(stories);
 
-    // const apiKey = 'n92DZWsbGi92AGqOU61WrbTbzwcLBSKT';
     
     useEffect(() => {
         const fetchData = async () => {
-            const url = api;
-            console.log(api);
+           
         
         try {
             const data = await fetch(api);
             const response = await data.json();
             const resultsArray = response;
-            // console.log(response);
+            
             setStories(resultsArray.results);
-            // console.log(stories);
+            
             } catch (error) {
                 console.log(error);
             }

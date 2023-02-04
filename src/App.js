@@ -8,9 +8,9 @@ import Story from './Components/Story';
 // NYT section URLS
 const apiKey = 'n92DZWsbGi92AGqOU61WrbTbzwcLBSKT';
 const topStoriesUrl = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`;
-const businessUrl = 'https://api.nytimes.com/svc/topstories/v2/business.json?api-key=n92DZWsbGi92AGqOU61WrbTbzwcLBSKT';
-const techUrl = 'https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=n92DZWsbGi92AGqOU61WrbTbzwcLBSKT';
-const booksUrl = 'https://api.nytimes.com/svc/topstories/v2/books.json?api-key=n92DZWsbGi92AGqOU61WrbTbzwcLBSKT';
+const businessUrl = `https://api.nytimes.com/svc/topstories/v2/business.json?api-key=${apiKey}`;
+const techUrl = `https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=${apiKey}`;
+const booksUrl = `https://api.nytimes.com/svc/topstories/v2/books.json?api-key=${apiKey}`;
 
 function App() {                    
 
@@ -30,7 +30,7 @@ function App() {
               <Route path="/" element={ <Story api={ topStoriesUrl} /> } />
               <Route path="/business" element={ <Story api={ businessUrl} /> } />
               <Route path="/technology" element={ <Story api={ techUrl } /> } />
-              <Route path="/books" element={ <Story apiKey={ booksUrl } /> } />
+              <Route path="/books" element={ <Story api={ booksUrl } /> } />
             </Routes>
 
       </main>
