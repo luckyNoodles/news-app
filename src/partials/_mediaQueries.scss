@@ -1,0 +1,48 @@
+
+@media (max-width: 320px) {
+
+.App-wrapper {
+    width: 100%;
+}    
+.hamburger {
+        position: relative;
+        background-color: lightgreen;
+        .material-symbols-outlined {
+            position: absolute;
+            display: inline-block;
+        }
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .navBar {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        top: -25px;
+        transform: translateX(-325px);
+        transition: transform 0.5s ease-in-out;
+        }
+    .navShow {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        top: -25px;
+        transform: translateX(-3px);
+        transition: transform 0.5s ease-in-out;
+    }
+
+}    
+    
+
+.menu {
+    display: none;
+}
+
+
+
+}
