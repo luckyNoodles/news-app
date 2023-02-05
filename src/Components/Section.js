@@ -26,13 +26,12 @@ function Section ({ apiData} ) {
                                     </div>
                                     <div className="storyText">
                                         <div className="title">
-                                            
-                                            <h4>{ story.section.toUpperCase() }</h4>
                                             <a href={ story.url }>
                                                 <h3>{ story.title }</h3>
                                                 <p className="byLine">{ story.byline }</p>
                                                 <p className="date">{ date }</p>
                                                 <p className="abstract"> { story.abstract }</p>
+                                                <h4>{ story.section.toUpperCase() }</h4>
                                             </a>
                                         </div>
                                         
