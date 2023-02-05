@@ -7,13 +7,21 @@
 .storyBox {
     display: flex;
     width: 80%;
+    margin: 10px 0 0 0;
     border: 1px solid black;
+    box-shadow: 5px 5px 3px grey;
     .imageContainer {
         align-self: center;
-        // width: 95%;
-        padding: 10px;
-        img {
-            width: 100%;
+        width: 250px;
+  
+        margin: 10px;
+        a {
+            img {
+                width: 250px;
+            }
+        }
+        .photoCredit {
+            font-size: .5rem;
         }
     }
     .storyText {
@@ -23,15 +31,25 @@
         .title {
             padding: 10px;
             // border: 1px solid black;
+            h4 {
+                margin: 0;
+                text-align: end;
+            }
+            .byLine,
+            .date {
+                font-size: .7rem;
+                line-height: .2rem;
+
+            }
             a {
                 text-decoration: none;
                     color: black;
             }
             
         }
-        .description {
-            padding: 10px;
-            // border: 1px solid black;
-        }
+        // .description {
+        //     padding: 10px;
+        //     border: 1px solid black;
+        // }
     }
 }

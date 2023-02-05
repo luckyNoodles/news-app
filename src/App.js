@@ -23,8 +23,6 @@ const style = `https://api.nytimes.com/svc/topstories/v2/style.json?api-key=${ap
 const food = `https://api.nytimes.com/svc/topstories/v2/food.json?api-key=${apiKey}`;
 const travel = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${apiKey}`;
 const magazine = `https://api.nytimes.com/svc/topstories/v2/magazine.json?api-key=${apiKey}`;
-
-
 const techUrl = `https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=${apiKey}`;
 
 
@@ -34,14 +32,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="App-wrapper">
-
-             <NavBar /> 
+          <NavBar /> 
         </div>
       </header>
-      
-      <main>
-        <h2>Breaking News</h2>
-            
+      <main className="App-wrapper">      
             <Routes> 
               <Route path="/" element={ <Story api={ topStoriesUrl} /> } />
               <Route path="/world" element={ <Story api={ world } /> } />
@@ -62,9 +56,7 @@ function App() {
 
               <Route path="/technology" element={ <Story api={ techUrl } /> } />
             </Routes>
-
       </main>
-
     </div>
   );
 }
