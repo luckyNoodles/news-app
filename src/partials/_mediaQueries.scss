@@ -7,9 +7,12 @@
 .hamburger {
         position: relative;
         background-color: lightgreen;
-        .material-symbols-outlined {
+        .material-symbols-outlined,
+        .menu {
             position: absolute;
             display: inline-block;
+            top: 0px;
+
         }
 }
 
@@ -31,18 +34,41 @@
         position: absolute;
         width: 100%;
         background-color: white;
-        top: -25px;
+        top: 0px;
         transform: translateX(-3px);
         transition: transform 0.5s ease-in-out;
     }
 
 }    
     
-
 .menu {
     display: none;
 }
 
+.storyBox {
+    flex-direction: column;
+    width: 95%;
+    .imageContainer {
+        width: 300px;
+        a {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .storyText {
+        .title {
+            h3 {
+                margin: 2px auto;
+            }
+            .byLine {
+                font-size: 0.6rem;
+                line-height: 0.6rem;
+            }
+
+        }
+    }
+}
 
 
 }
