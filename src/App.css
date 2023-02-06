@@ -340,10 +340,13 @@ main {
     position: relative;
     background-color: lightgreen;
   }
-  .hamburger .material-symbols-outlined,
-.hamburger .menu {
+  .hamburger .material-symbols-outlined {
     position: absolute;
     display: inline-block;
+    top: 0px;
+  }
+  .hamburger .menu {
+    position: absolute;
     top: 0px;
   }
   .navContainer {
@@ -388,5 +391,78 @@ main {
   .storyBox .storyText .title .byLine {
     font-size: 0.6rem;
     line-height: 0.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .App-wrapper {
+    width: 100%;
+  }
+  .hamburger {
+    position: relative;
+    background-color: lightgreen;
+  }
+  .hamburger .material-symbols-outlined {
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+  }
+  .hamburger .menu {
+    position: absolute;
+    top: 0px;
+  }
+  .navContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .navContainer .navBar {
+    flex-direction: column;
+    position: absolute;
+    width: 30%;
+    background-color: white;
+    top: -25px;
+    transform: translateX(-325px);
+    transition: transform 0.5s ease-in-out;
+  }
+  .navContainer .navShow {
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 30%;
+    background-color: white;
+    top: 0px;
+    transform: translateX(-3px);
+    transition: transform 0.5s ease-in-out;
+    height: 35vh;
+  }
+  .menu {
+    display: none;
+  }
+  .storyComponent {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .storyBox {
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+    height: 600px;
+  }
+  .storyBox .imageContainer {
+    width: 300px;
+  }
+  .storyBox .imageContainer a img {
+    width: 100%;
+  }
+  .storyBox .storyText .title h3 {
+    margin: 2px auto;
+  }
+  .storyBox .storyText .title .byLine {
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+  }
+  .storyBox .storyText .title .department {
+    display: none;
   }
 }/*# sourceMappingURL=App.css.map */

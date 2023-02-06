@@ -31,7 +31,7 @@ function Section ({ apiData} ) {
                                                 <p className="byLine">{ story.byline }</p>
                                                 <p className="date">{ date }</p>
                                                 <p className="abstract"> { story.abstract }</p>
-                                                <h4>{ story.section.toUpperCase() }</h4>
+                                                <h4 className="department">{ story.section.toUpperCase() }</h4>
                                             </a>
                                         </div>
                                         
