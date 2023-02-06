@@ -5,11 +5,9 @@ function Story ({api}) {
      console.log(api);
     const [stories, setStories] = useState([]);
 
-    
     useEffect(() => {
         const fetchData = async () => {
-           
-        
+
         try {
             const data = await fetch(api);
             const response = await data.json();

@@ -1,10 +1,17 @@
 .headerTitle {
     display: flex;
-    justify-content: center;
-    // border: 1px solid red;
+    flex-direction: column;
+    align-items: center;
     margin-top: 2%;
     margin-bottom: 0;
     border-bottom: 1px solid lightgray;
+    h2 {
+        margin: 5px;
+        font-size: 3rem;
+    }
+    .dateTitle {
+        margin-bottom: 30px;
+    }
 }
 
 .navBar {
@@ -30,4 +37,21 @@
         }
        
     }
+}
+
+.hamburger {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: lightcoral;
+
+    .material-symbols-outlined,
+    .menu {
+        position: absolute;
+        display: none;
+        top: -30px;
+        // color: white;
+
+    }
+
 }
