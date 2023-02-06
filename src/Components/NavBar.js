@@ -2,13 +2,16 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function NavBar () {
-
     const [hidden, setUnhide] = useState(true);
-    console.log(hidden);
 
     const handleClick = () => {
         setUnhide(!hidden);
     }
+
+    const date = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+    const stringDate = date.toLocaleDateString('US-EN', options);
+    console.log(stringDate);
 
     return (
         <>
@@ -19,6 +22,7 @@ function NavBar () {
             <div className="navContainer">
                 <div className="headerTitle">
                     <h2> The New York Times </h2>
+                    <p className="dateTitle">{stringDate}</p>
                 </div>
                     <ul className={hidden === true ? "navBar" : "navBar navShow"}>
                         <li><Link to='/'>Top Stories</Link></li>

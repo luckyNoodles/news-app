@@ -180,6 +180,110 @@
 } // ---------end of 767 ---------
 
 @media (max-width: 991px) {
+.App-wrapper {
+        width: 100%;
+    }
+
+    .hamburger {
+        position: relative;
+        background-color: lightgreen;
+
+        .material-symbols-outlined {
+            position: absolute;
+            display: inline-block;
+            top: 10px;
+            left: 10px;
+        }
+
+        .menu {
+            position: absolute;
+            // display: inline-block;
+            top: 0px;
+
+        }
+    }
+
+    .navContainer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .navBar {
+            flex-direction: column;
+            position: absolute;
+            width: 30%;
+            background-color: white;
+            top: -25px;
+            transform: translateX(-325px);
+            transition: transform 0.5s ease-in-out;
+            li {
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .navShow {
+            flex-direction: column;
+            flex-wrap: wrap;
+            position: absolute;
+            width: 100%;
+            background-color: white;
+            top: 0px;
+            transform: translateX(-3px);
+            transition: transform 0.5s ease-in-out;
+            height: 35vh;
+        }
+
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .storyComponent {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .storyBox {
+        flex-direction: column;
+        width: 47%;
+        margin: 5px;
+        height: 530px;
+
+        .imageContainer {
+            width: 300px;
+
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .storyText {
+            .title {
+                h3 {
+                    margin: 2px auto;
+                }
+
+                .byLine {
+                    font-size: 0.6rem;
+                    line-height: 0.6rem;
+                }
+
+                .department {
+                    display: none;
+                }
+
+            }
+        }
+    }
+
+} //-----end 991 -----------
+
+@media (max-width: 1200px) {
 
 
 }
