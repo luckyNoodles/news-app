@@ -31,10 +31,7 @@
         .title {
             padding: 10px;
             // border: 1px solid black;
-            h4 {
-                margin: 0;
-                text-align: end;
-            }
+            
             .byLine,
             .date {
                 font-size: .7rem;
@@ -49,4 +46,8 @@
         }
       
     }
+        h4 {
+            margin: 0;
+            text-align: end;
+        }
 }

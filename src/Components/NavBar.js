@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function NavBar () {
-    const [hidden, setUnhide] = useState(true);
+    const [hidden, setHidden] = useState(true);
 
     const handleClick = () => {
-        setUnhide(!hidden);
+        setHidden(!hidden);
     }
 
     const date = new Date();
@@ -16,21 +16,22 @@ function NavBar () {
     return (
         <>
             <div onClick={handleClick} className="hamburger">
-              <span class={hidden === true ? "material-symbols-outlined" : "menu"}>menu</span>
-              <span class={hidden === false ? "material-symbols-outlined" : "menu"}>close</span>
+              <span className={hidden === true ? "material-symbols-outlined" : "menu"}>menu</span>
+              <span className={hidden === false ? "material-symbols-outlined" : "menu"}>close</span>
             </div>
             <div className="navContainer">
                 <div className="headerTitle">
                     <h2> The New York Times </h2>
                     <p className="dateTitle">{stringDate}</p>
                 </div>
-                    <ul className={hidden === true ? "navBar" : "navBar navShow"}>
+                    <ul onClick={handleClick} className={hidden === true ? "navBar" : "navBar navShow"}>
                         <li><Link to='/'>Top Stories</Link></li>
                         <li><Link to='/world'>World</Link></li>
                         <li><Link to='/us'>U.S.</Link></li>
                         <li><Link to='/politics'>Politics</Link></li>
                         <li><Link to='/nyregion'>N.Y.</Link></li>
                         <li><Link to='/business'>Business</Link></li>
+                            <li> <Link to='/business/technology'>Technology</Link> </li>
                         <li><Link to='/opinion'>Opinion</Link></li>
                         <li><Link to='/science'>Science</Link></li>
                         <li><Link to='/health'>Health</Link></li>
@@ -45,10 +46,9 @@ function NavBar () {
                         <li><a href="https://theathletic.com/">The Athletic</a> </li>
                         <li><a href="https://www.nytimes.com/wirecutter/">Wirecutter</a></li>
                         <li><a href="https://www.nytimes.com/crosswords">Games</a></li>
-
-                        <li> <Link to='/technology'>Technology</Link> </li>
                     </ul>
 
+                   
             </div>
         
         </>

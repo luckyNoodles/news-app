@@ -17,7 +17,7 @@ function Section ({ apiData} ) {
                             const date = pubDate.toLocaleDateString('US-EN', options);
 
                         return  (<div className="storyBox" key={story.uri}>
-                
+                                    <h4 className="department">{ story.section.toUpperCase() }</h4>
                                     <div className="imageContainer">
                                         <a href={ story.url } >
                                             <img src={ image.url ? image.url : nytLogo } alt={ image.caption } />
@@ -31,11 +31,12 @@ function Section ({ apiData} ) {
                                                 <p className="byLine">{ story.byline }</p>
                                                 <p className="date">{ date }</p>
                                                 <p className="abstract"> { story.abstract }</p>
-                                                <h4 className="department">{ story.section.toUpperCase() }</h4>
+                                                
                                             </a>
                                         </div>
                                         
                                     </div>
+                                    
                                 </div>
                             )
                         })
