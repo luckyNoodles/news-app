@@ -5,12 +5,10 @@
     margin-top: 2%;
     margin-bottom: 0;
     border-bottom: 1px solid lightgray;
-
     h2 {
         margin: 5px;
         font-size: 3rem;
     }
-
     .dateTitle {
         margin-bottom: 30px;
     }
@@ -23,12 +21,9 @@
     border-width: 5px;
     padding: 0;
     margin: 3px;
-
-    // border: 1px solid red;
     li {
         list-style: none;
         margin: 5px auto;
-
         a {
             text-decoration: none;
             text-align: center;
@@ -37,9 +32,7 @@
             padding: 2px;
             font-size: 0.5rem;
             font-weight: bold;
-
         }
-
     }
 }
 
@@ -47,14 +40,10 @@
     position: relative;
     width: 25px;
     height: 25px;
-
     .material-symbols-outlined,
     .menu {
         position: absolute;
         display: none;
         top: -30px;
-        // color: white;
-
     }
-
 }
