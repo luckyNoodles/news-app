@@ -2,12 +2,14 @@ main {
     display: flex;
     justify-content: center;
 }
+
 .storyComponent {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+
 .storyBox {
     display: flex;
     width: 80%;
@@ -31,34 +33,22 @@ main {
     .storyText {
         display: flex;
         flex-direction: column;
-        // border: 1px solid black;
         .department {
-                margin: 0;
-                text-align: end;
-            }
+            margin: 0;
+            text-align: end;
+        }
         .title {
             padding: 10px;
             text-align: center;
-            // border: 1px solid black;
-            
             .byLine,
             .date {
                 font-size: .7rem;
                 line-height: .2rem;
-
             }
             a {
                 text-decoration: none;
                     color: black;
             }
-            .ellipsis-text {
-                white-space: wrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            
         }
-      
     }
-       
 }
