@@ -230,6 +230,23 @@ html {
   margin: 0 auto;
 }
 
+.back {
+  position: relative;
+}
+.back .hide {
+  display: none;
+}
+.back .show {
+  display: block;
+  background-color: #000;
+  color: white;
+  border-radius: 10px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 html {
   font-family: "Domine", serif;
   font-size: 125%;
@@ -325,6 +342,7 @@ main {
 }
 .storyBox .storyText .title {
   padding: 10px;
+  text-align: center;
 }
 .storyBox .storyText .title .byLine,
 .storyBox .storyText .title .date {
@@ -396,8 +414,9 @@ main {
   .storyBox .imageContainer a img {
     width: 100%;
   }
-  .storyBox .storyText .title h3 {
+  .storyBox .storyText .title h1 {
     margin: 2px auto;
+    text-align: center;
   }
   .storyBox .storyText .title .byLine {
     font-size: 0.6rem;
@@ -436,6 +455,7 @@ main {
   .navContainer .navShow {
     flex-wrap: wrap;
     width: 100%;
+    background-color: white;
     top: 0px;
     transform: translateX(-3px);
     transition: transform 0.5s ease-in-out;

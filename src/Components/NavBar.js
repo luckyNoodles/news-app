@@ -21,7 +21,7 @@ function NavBar () {
             </div>
             <div className="navContainer">
                 <div className="headerTitle">
-                    <h2> The New York Times </h2>
+                    <h1> The New York Times </h1>
                     <p className="dateTitle">{stringDate}</p>
                 </div>
                     <ul onClick={handleClick} className={hidden === true ? "navBar" : "navBar navShow"}>
