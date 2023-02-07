@@ -1,6 +1,7 @@
 import './App.scss';
 import NavBar from './Components/NavBar.js';
 import SectionRouter from './Components/SectionRouter'; 
+import BackToTop from './Components/BackToTop';
 
 function App() {    
   return (
@@ -10,7 +11,10 @@ function App() {
           <NavBar /> 
         </div>
       </header>
-      <main className="App-wrapper">  
+      <main className="App-wrapper"> 
+        <div className="back">
+          <BackToTop /> 
+        </div>
         <SectionRouter />
       </main>
     </div>
