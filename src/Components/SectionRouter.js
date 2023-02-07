@@ -27,26 +27,24 @@ function SectionRouter () {
     return (
         
         <div>
-                <Routes> 
-                    <Route path="/" element={ <Story api={ topStoriesUrl} /> } />
-                    <Route path="/world" element={ <Story api={ world } /> } />
-                    <Route path="/us" element={ <Story api={ us } /> } />
-                    <Route path="/politics" element={ <Story api={ politics } /> } />
-                    <Route path="/nyregion" element={ <Story api={ nyregion } /> } />
-                    <Route path="/business" element={ <Story api={ business} /> } />
-                    <Route path="/opinion" element={ <Story api={ opinion } /> } />
-                    <Route path="/science" element={ <Story api={ science } /> } />
-                    <Route path="/health" element={ <Story api={ health } /> } />
-                    <Route path="/sports" element={ <Story api={ sports } /> } />
-                    <Route path="/arts" element={ <Story api={ arts } /> } />
-                    <Route path="/books" element={ <Story api={ books } /> } />
-                    <Route path="/style" element={ <Story api={ style } /> } />
-                    <Route path="/food" element={ <Story api={ food } /> } />
-                    <Route path="/travel" element={ <Story api={ travel } /> } />
-                    <Route path="/magazine" element={ <Story api={ magazine } /> } />
-
-                    <Route path="/technology" element={ <Story api={ techUrl } /> } />
-                </Routes>
+            <Routes> 
+                <Route path="/" element={ <Story api={ topStoriesUrl} /> } />
+                <Route path="/world" element={ <Story api={ world } /> } />
+                <Route path="/us" element={ <Story api={ us } /> } />
+                <Route path="/politics" element={ <Story api={ politics } /> } />
+                <Route path="/nyregion" element={ <Story api={ nyregion } /> } />
+                <Route path="/business" element={ <Story api={ business} /> } />
+                <Route path="/opinion" element={ <Story api={ opinion } /> } />
+                <Route path="/science" element={ <Story api={ science } /> } />
+                <Route path="/health" element={ <Story api={ health } /> } />
+                <Route path="/sports" element={ <Story api={ sports } /> } />
+                <Route path="/arts" element={ <Story api={ arts } /> } />
+                <Route path="/books" element={ <Story api={ books } /> } />
+                <Route path="/style" element={ <Story api={ style } /> } />
+                <Route path="/food" element={ <Story api={ food } /> } />
+                <Route path="/travel" element={ <Story api={ travel } /> } />
+                <Route path="/magazine" element={ <Story api={ magazine } /> } />
+            </Routes>
         </div>
 
     )

@@ -11,7 +11,6 @@ function NavBar () {
     const date = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
     const stringDate = date.toLocaleDateString('US-EN', options);
-    console.log(stringDate);
 
     return (
         <>

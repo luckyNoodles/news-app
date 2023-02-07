@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Section from './Section';
 
 function Story ({api}) {
-     console.log(api);
     const [stories, setStories] = useState([]);
 
     useEffect(() => {

@@ -1,16 +1,17 @@
 import nytLogo from "../images/newYorkTimes.png";
 
+
 function Section ({ apiData} ) {
-    const stories = apiData;        
+    const stories = apiData;    
+    
+
     return (
          <div className="storyComponent">
-            {/* <div className="App-wrapper"> */}
+            
                     {
                     stories.map((story) => {
                             const imageArray = story.multimedia; 
                             const image = imageArray == null ? "missing media" : imageArray[1]; 
-                            const missingImage = `../images/newYorkTimes.png`;
-                            console.log(missingImage);
                             
                             const pubDate = new Date(story.published_date);
                             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
