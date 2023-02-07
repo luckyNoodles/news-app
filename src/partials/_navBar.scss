@@ -17,7 +17,7 @@
 .navBar {
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 1px double black;
+    // border-bottom: 1px double black;
     border-width: 5px;
     padding: 0;
     margin: 3px;
@@ -34,6 +34,13 @@
             font-weight: bold;
         }
     }
+}
+
+.doubleHr {
+    height: 6px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
 }
 
 .hamburger {

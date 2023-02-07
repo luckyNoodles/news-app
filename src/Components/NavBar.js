@@ -45,7 +45,7 @@ function NavBar () {
                         <li><a href="https://www.nytimes.com/wirecutter/">Wirecutter</a></li>
                         <li><a href="https://www.nytimes.com/crosswords">Games</a></li>
                     </ul>
-
+                <div className="doubleHr"></div>
                    
             </div>
         
