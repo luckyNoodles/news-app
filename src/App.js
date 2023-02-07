@@ -7,15 +7,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="App-wrapper">
-
           <NavBar /> 
-
         </div>
       </header>
       <main className="App-wrapper">  
-
         <SectionRouter />
-
       </main>
     </div>
   );
