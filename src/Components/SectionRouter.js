@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Story from './Story';
+import Fetch from './Fetch';
 
 function SectionRouter () {
     //nyt Api key    
@@ -22,28 +22,28 @@ function SectionRouter () {
     const food = `https://api.nytimes.com/svc/topstories/v2/food.json?api-key=${apiKey}`;
     const travel = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${apiKey}`;
     const magazine = `https://api.nytimes.com/svc/topstories/v2/magazine.json?api-key=${apiKey}`;
-    const techUrl = `https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=${apiKey}`;
+    // const techUrl = `https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=${apiKey}`;
 
     return (
         
         <div>
             <Routes> 
-                <Route path="/" element={ <Story api={ topStoriesUrl} /> } />
-                <Route path="/world" element={ <Story api={ world } /> } />
-                <Route path="/us" element={ <Story api={ us } /> } />
-                <Route path="/politics" element={ <Story api={ politics } /> } />
-                <Route path="/nyregion" element={ <Story api={ nyregion } /> } />
-                <Route path="/business" element={ <Story api={ business} /> } />
-                <Route path="/opinion" element={ <Story api={ opinion } /> } />
-                <Route path="/science" element={ <Story api={ science } /> } />
-                <Route path="/health" element={ <Story api={ health } /> } />
-                <Route path="/sports" element={ <Story api={ sports } /> } />
-                <Route path="/arts" element={ <Story api={ arts } /> } />
-                <Route path="/books" element={ <Story api={ books } /> } />
-                <Route path="/style" element={ <Story api={ style } /> } />
-                <Route path="/food" element={ <Story api={ food } /> } />
-                <Route path="/travel" element={ <Story api={ travel } /> } />
-                <Route path="/magazine" element={ <Story api={ magazine } /> } />
+                <Route path="/world" element={ <Fetch api={ world } /> } />
+                <Route path="/" element={ <Fetch api={ topStoriesUrl} /> } />
+                <Route path="/us" element={ <Fetch api={ us } /> } />
+                <Route path="/politics" element={ <Fetch api={ politics } /> } />
+                <Route path="/nyregion" element={ <Fetch api={ nyregion } /> } />
+                <Route path="/business" element={ <Fetch api={ business} /> } />
+                <Route path="/opinion" element={ <Fetch api={ opinion } /> } />
+                <Route path="/science" element={ <Fetch api={ science } /> } />
+                <Route path="/health" element={ <Fetch api={ health } /> } />
+                <Route path="/sports" element={ <Fetch api={ sports } /> } />
+                <Route path="/arts" element={ <Fetch api={ arts } /> } />
+                <Route path="/books" element={ <Fetch api={ books } /> } />
+                <Route path="/style" element={ <Fetch api={ style } /> } />
+                <Route path="/food" element={ <Fetch api={ food } /> } />
+                <Route path="/travel" element={ <Fetch api={ travel } /> } />
+                <Route path="/magazine" element={ <Fetch api={ magazine } /> } />
             </Routes>
         </div>
 
