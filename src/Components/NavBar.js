@@ -31,7 +31,6 @@ function NavBar () {
                         <li><Link to='/politics'>Politics</Link></li>
                         <li><Link to='/nyregion'>N.Y.</Link></li>
                         <li><Link to='/business'>Business</Link></li>
-                            <li> <Link to='/business/technology'>Technology</Link> </li>
                         <li><Link to='/opinion'>Opinion</Link></li>
                         <li><Link to='/science'>Science</Link></li>
                         <li><Link to='/health'>Health</Link></li>

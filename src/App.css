@@ -277,7 +277,6 @@ html {
   position: relative;
   width: 25px;
   height: 25px;
-  background-color: lightcoral;
 }
 .hamburger .material-symbols-outlined,
 .hamburger .menu {
@@ -286,10 +285,16 @@ html {
   top: -30px;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
 .storyComponent {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .storyBox {
@@ -314,6 +319,10 @@ html {
   display: flex;
   flex-direction: column;
 }
+.storyBox .storyText .department {
+  margin: 0;
+  text-align: end;
+}
 .storyBox .storyText .title {
   padding: 10px;
 }
@@ -326,18 +335,10 @@ html {
   text-decoration: none;
   color: black;
 }
-.storyBox h4 {
-  margin: 0;
-  text-align: end;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.storyComponent {
-  align-items: center;
+.storyBox .storyText .title .ellipsis-text {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -346,7 +347,6 @@ main {
   }
   .hamburger {
     position: relative;
-    background-color: lightgreen;
   }
   .hamburger .material-symbols-outlined {
     position: absolute;
@@ -408,9 +408,6 @@ main {
   .App-wrapper {
     width: 100%;
   }
-  .hamburger {
-    background-color: lightgreen;
-  }
   .hamburger .material-symbols-outlined {
     display: inline-block;
     top: 10px;
@@ -418,6 +415,7 @@ main {
   }
   .navContainer {
     display: flex;
+    flex-direction: column;
     position: relative;
   }
   .navContainer .headerTitle {
@@ -453,17 +451,24 @@ main {
     flex-direction: column;
     width: 90%;
   }
+  .storyBox .department {
+    margin: 5px;
+  }
   .storyBox .imageContainer {
     width: 95%;
   }
   .storyBox .imageContainer a img {
     width: 100%;
   }
+  .storyBox .storyText .title h3 {
+    margin: 2px auto;
+  }
+  .storyBox .storyText .title .byLine {
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .hamburger {
-    background-color: lightgreen;
-  }
   .hamburger .material-symbols-outlined {
     display: inline-block;
     top: 10px;
@@ -482,7 +487,7 @@ main {
     position: absolute;
     background-color: white;
     top: -25px;
-    transform: translateX(-325px);
+    transform: translateY(-720px);
     transition: transform 0.5s ease-in-out;
   }
   .navContainer .navBar li a {
@@ -492,7 +497,7 @@ main {
     flex-wrap: wrap;
     width: 100%;
     top: 0px;
-    transform: translateX(-3px);
+    transform: translateY(10px);
     transition: transform 0.5s ease-in-out;
     height: 35vh;
   }
@@ -527,9 +532,6 @@ main {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .hamburger {
-    background-color: lightgreen;
-  }
   .hamburger .material-symbols-outlined {
     display: inline-block;
     top: 10px;
@@ -569,29 +571,72 @@ main {
     display: none;
   }
   .storyComponent {
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
   }
-  .storyBox {
-    flex-direction: column;
+  .storyComponent .storyBox {
     width: 45%;
-    margin: 10px;
-    height: 655px;
+    margin: 5px;
+    height: 225px;
   }
-  .storyBox .imageContainer {
-    width: 95%;
+  .storyComponent .storyBox .department {
+    display: none;
   }
-  .storyBox .imageContainer a img {
+  .storyComponent .storyBox .imageContainer {
+    width: 90%;
+    margin-top: 15px;
+    align-self: flex-start;
+  }
+  .storyComponent .storyBox .imageContainer a img {
     width: 100%;
   }
-  .storyBox .storyText .title h3 {
+  .storyComponent .storyBox .imageContainer .photoCredit {
+    display: none;
+  }
+  .storyComponent .storyBox .storyText .title h3 {
     margin: 2px auto;
   }
-  .storyBox .storyText .title .byLine {
-    font-size: 0.6rem;
-    line-height: 0.6rem;
+  .storyComponent .storyBox .storyText .title .byLine {
+    display: none;
   }
-  .storyBox .department {
-    margin: 10px;
+  .storyComponent .storyBox .storyText .title .abstract {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .menu {
+    display: none;
+  }
+  .storyComponent {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .storyComponent .storyBox {
+    width: 45%;
+    margin: 5px;
+    height: 225px;
+  }
+  .storyComponent .storyBox .department {
+    display: none;
+  }
+  .storyComponent .storyBox .imageContainer {
+    width: 90%;
+    margin-top: 15px;
+    align-self: flex-start;
+  }
+  .storyComponent .storyBox .imageContainer a img {
+    width: 100%;
+  }
+  .storyComponent .storyBox .imageContainer .photoCredit {
+    display: none;
+  }
+  .storyComponent .storyBox .storyText .title h3 {
+    margin: 2px auto;
+  }
+  .storyComponent .storyBox .storyText .title .byLine {
+    display: none;
+  }
+  .storyComponent .storyBox .storyText .title .abstract {
+    font-size: 0.75rem;
   }
 }/*# sourceMappingURL=App.css.map */

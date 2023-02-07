@@ -30,7 +30,7 @@ function Section ({ apiData} ) {
                                                 <h3>{ story.title }</h3>
                                                 <p className="byLine">{ story.byline }</p>
                                                 <p className="date">{ date }</p>
-                                                <p className="abstract"> { story.abstract }</p>
+                                                <p className="abstract ellipsis-text"> { story.abstract }</p>
                                                 
                                             </a>
                                         </div>
