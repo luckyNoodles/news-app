@@ -4,7 +4,6 @@
     align-items: center;
     margin-top: 2%;
     margin-bottom: 0;
-    border-bottom: 1px solid lightgray;
     h2 {
         margin: 5px;
         font-size: 3rem;
@@ -36,11 +35,19 @@
     }
 }
 
-.doubleHr {
-    height: 6px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    margin-bottom: 20px;
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    .doubleHr {
+        height: 6px;
+        width: 90%;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-bottom: 20px;
+        align-self: center;
+        
+    }
+
 }
 
 .hamburger {

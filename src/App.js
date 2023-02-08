@@ -1,13 +1,11 @@
-// import { useParams } from "react-router-dom";
 import './App.scss';
 import NavBar from './Components/NavBar.js';
 import SectionRouter from './Components/SectionRouter'; 
 import BackToTop from './Components/BackToTop';
 import Footer from './Components/Footer';
+import Reload from './Components/Reload';
 
 function App() {   
-  // let { section } = useParams(); 
-  // console.log(section);
   return (
     <div className="App">
       
@@ -23,7 +21,9 @@ function App() {
         </div>
         <SectionRouter />
       </main>
+
       <Footer />
+      <Reload />
     </div>
   );
 }

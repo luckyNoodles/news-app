@@ -271,7 +271,6 @@ html {
   align-items: center;
   margin-top: 2%;
   margin-bottom: 0;
-  border-bottom: 1px solid lightgray;
 }
 .headerTitle h2 {
   margin: 5px;
@@ -302,11 +301,17 @@ html {
   font-weight: bold;
 }
 
-.doubleHr {
+.navContainer {
+  display: flex;
+  flex-direction: column;
+}
+.navContainer .doubleHr {
   height: 6px;
+  width: 90%;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   margin-bottom: 20px;
+  align-self: center;
 }
 
 .hamburger {
@@ -394,6 +399,10 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+  .navContainer h1 {
+    width: 300px;
+    text-align: center;
   }
   .navContainer .navBar {
     flex-direction: column;
@@ -641,6 +650,13 @@ main {
   .menu {
     display: none;
   }
+  .headerTitle {
+    border-bottom: 1px solid lightgray;
+  }
+  .navContainer .doubleHr {
+    width: 100%;
+    align-self: center;
+  }
   .storyBox .department {
     display: none;
   }
@@ -657,7 +673,7 @@ main {
   }
   .storyComponent {
     display: grid;
-    grid-template-columns: [first] 750px [line2] 440px;
+    grid-template-columns: [first] 650px [line2] 420px;
     grid-template-rows: repeat(2, 1fr) auto;
     align-items: flex-start;
   }
@@ -740,7 +756,7 @@ main {
     width: 470px;
   }
   .storyComponent .storyBox:nth-child(n+5) .storyText .title h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 2px auto;
     text-align: left;
   }
