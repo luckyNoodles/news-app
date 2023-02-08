@@ -1,7 +1,10 @@
 import nytLogo from "../images/newYorkTimes.png";
+import { useParams } from "react-router-dom";
 
-function Story ({ apiData} ) {
+function Story ( { apiData } ) {
     const stories = apiData;    
+    const { slug } = useParams();
+    console.log(slug);
 
     return (
          <div className="storyComponent">

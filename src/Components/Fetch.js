@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Story from './Story';
 
-function Fetch ({api}) {
+function Fetch ( { api } ) {
     const [stories, setStories] = useState([]);
-
+   
     useEffect(() => {
         const fetchData = async () => {
 
@@ -13,8 +13,8 @@ function Fetch ({api}) {
             const resultsArray = response;
             
             setStories(resultsArray.results);
-            
-            } catch (error) {
+            } 
+            catch (error) {
                 console.log(error);
             }
         } 
