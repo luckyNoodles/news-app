@@ -75,7 +75,7 @@
             }
             .byLine {
                 font-size: 0.6rem;
-                line-height: 0.6rem;
+                // line-height: 0.6rem;
             }
 
         }
@@ -165,7 +165,7 @@
 
                 .byLine {
                     font-size: 0.6rem;
-                    line-height: 0.6rem;
+                    // line-height: 0.6rem;
                 }
 
             }
@@ -245,7 +245,7 @@
             }
             .byLine {
                 font-size: 0.6rem;
-                line-height: 0.6rem;
+                // line-height: 0.6rem;
             }
         }
     }
@@ -347,8 +347,7 @@
 // ------- end of 992px to 1199px ---------
 
 @media (min-width: 1200px) {
-.menu,
- {
+.menu {
     display: none;
 }
 

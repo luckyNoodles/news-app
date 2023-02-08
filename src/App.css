@@ -252,6 +252,14 @@ footer p {
   text-align: center;
 }
 
+.error {
+  height: 100vh;
+  width: 80%;
+}
+.error h2 {
+  text-Align: "center";
+}
+
 html {
   font-family: "Domine", serif;
   font-size: 125%;
@@ -358,7 +366,6 @@ main {
 .storyBox .storyText .title .byLine,
 .storyBox .storyText .title .date {
   font-size: 0.7rem;
-  line-height: 0.2rem;
 }
 .storyBox .storyText .title a {
   text-decoration: none;
@@ -428,7 +435,6 @@ main {
   }
   .storyBox .storyText .title .byLine {
     font-size: 0.6rem;
-    line-height: 0.6rem;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -493,7 +499,6 @@ main {
   }
   .storyBox .storyText .title .byLine {
     font-size: 0.6rem;
-    line-height: 0.6rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -554,7 +559,6 @@ main {
   }
   .storyBox .storyText .title .byLine {
     font-size: 0.6rem;
-    line-height: 0.6rem;
   }
   .storyBox .department {
     margin: 10px;
@@ -604,9 +608,10 @@ main {
     flex-wrap: wrap;
   }
   .storyComponent .storyBox {
-    width: 45%;
+    width: 30%;
     margin: 5px;
-    height: 225px;
+    height: 480px;
+    flex-direction: column;
   }
   .storyComponent .storyBox .department {
     display: none;
