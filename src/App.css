@@ -657,7 +657,7 @@ main {
   }
   .storyComponent {
     display: grid;
-    grid-template-columns: [first] 700px [line2] 350px;
+    grid-template-columns: [first] 750px [line2] 440px;
     grid-template-rows: repeat(2, 1fr) auto;
     align-items: flex-start;
   }
@@ -673,6 +673,10 @@ main {
   }
   .storyComponent .storyBox:nth-child(1) h3 {
     margin: 0px;
+    font-size: 1rem;
+  }
+  .storyComponent .storyBox:nth-child(1) .abstract {
+    font-size: 0.8rem;
   }
   .storyComponent .storyBox:nth-child(1) .date,
   .storyComponent .storyBox:nth-child(1) .byLine,
@@ -710,6 +714,11 @@ main {
   .storyComponent .storyBox:nth-child(3) h3,
   .storyComponent .storyBox:nth-child(4) h3 {
     margin: 0px;
+    font-size: 1rem;
+  }
+  .storyComponent .storyBox:nth-child(3) .abstract,
+  .storyComponent .storyBox:nth-child(4) .abstract {
+    font-size: 0.8rem;
   }
   .storyComponent .storyBox:nth-child(3) .date,
   .storyComponent .storyBox:nth-child(3) .byLine,
@@ -722,10 +731,13 @@ main {
   .storyComponent .storyBox:nth-child(n+5) {
     grid-column: 1/span 2;
     width: 100%;
-    height: 400px;
+    height: 365px;
   }
   .storyComponent .storyBox:nth-child(n+5) img {
     width: 450px;
+  }
+  .storyComponent .storyBox:nth-child(n+5) .imageContainer {
+    width: 470px;
   }
   .storyComponent .storyBox:nth-child(n+5) .storyText .title h3 {
     font-size: 2rem;
