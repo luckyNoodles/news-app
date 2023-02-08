@@ -351,44 +351,111 @@
     display: none;
 }
 
-.storyComponent {
-    flex-direction: row;
-    flex-wrap: wrap;
-    .storyBox {
-        width: 45%;
-        margin: 5px;
-        height: 225px;
-        .department {
-            display: none;
-        }
-        .imageContainer {
-            width: 90%;
-            margin-top: 15px;
-            align-self: flex-start;
-            a {
-                img {
-                    width: 100%;
-                }
-            }
-            .photoCredit {
-                display: none;
+.storyBox {
+    .department {
+        display: none;
+    }
+    .imageContainer {
+        width: 90%;
+        margin-top: 15px;
+        align-self: flex-start;
+        a {
+            img {
+                width: 100%;
             }
         }
-        .storyText {
-            .title {
-                h3 {
-                    margin: 2px auto;
-                }
-                .byLine {
-                    display: none;
-                }
-                .abstract {
-                    font-size: 0.75rem;
-                }
-            }
+               
+        .photoCredit {
+            // display: none;
+            margin: 0px;
         }
     }
 }
 
+.storyComponent {
+        display: grid;
+        grid-template-columns: [first] 700px [line2] 350px;
+        grid-template-rows: repeat(2, 1fr) auto;
+        align-items:flex-start;
+        .storyBox:nth-child(1) {
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 2;
+                width:98%;
+                height: 650px;
+                flex-direction: column;
+                .imageContainer {
+                    width: 97%;
+                }
+                h3 {
+                    margin: 0px;
+                }
+            }
+        .storyBox:nth-child(2) {
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+            width: 98%;
+            height: 330px;
+            margin-top: 165px;
+            flex-direction: row;
+            .imageContainer {
+                width: 97%;
+            }
+            // h3 {
+            //     margin: 0px;
+            // }
+        }
+        .storyBox:nth-child(3),
+        .storyBox:nth-child(4) {
+            grid-column: 2;
+            width: 100%;
+            height:  490px;
+            flex-direction: column;
+            .imageContainer {
+                    width: 90%;
+                    align-self: center;
+                }
+                h3 {
+                    margin: 0px;
+                }
+                .photoCredit {
+                    display: none;
+                }
+        }
+        .storyBox:nth-child(n+5) {
+            grid-column: 1 / span 2;
+            width: 100%;
+            height: 400px;
+            img {
+                width:450px;
+            }
+            .storyText {
+                .title {
+                    h3 {
+                        font-size: 2rem;
+                        margin: 2px auto;
+                        text-align: left;
+                    }
+                    .byLine {
+                        display: block;
+                        font-size: 1rem;
+                        text-align: left;
+                    }
+                    .date {
+                        font-size: 1.2rem;
+                        line-height: .6rem;
+                        text-align: left;
+                    }
+                    .abstract {
+                        font-size: 1.2rem;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+}
+
+
 }
 //-------------end 1200px------------------
+
+
