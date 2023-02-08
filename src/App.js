@@ -3,6 +3,7 @@ import './App.scss';
 import NavBar from './Components/NavBar.js';
 import SectionRouter from './Components/SectionRouter'; 
 import BackToTop from './Components/BackToTop';
+import Footer from './Components/Footer';
 
 function App() {   
   // let { section } = useParams(); 
@@ -22,7 +23,7 @@ function App() {
         </div>
         <SectionRouter />
       </main>
-      
+      <Footer />
     </div>
   );
 }
