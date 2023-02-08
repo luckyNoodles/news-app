@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Fetch from './Fetch';
+import ErrorPage from './ErrorPage';
 
 function SectionRouter () {
     //nyt Api key    
@@ -29,7 +30,7 @@ function SectionRouter () {
         <div>
             <Routes> 
                 <Route path="/world" element={ <Fetch api={ world } /> } />
-                <Route path="/" element={ <Fetch api={ topStoriesUrl} /> } />
+                <Route path="/" element={ <Fetch api={ topStoriesUrl } /> } />
                 <Route path="/us" element={ <Fetch api={ us } /> } />
                 <Route path="/politics" element={ <Fetch api={ politics } /> } />
                 <Route path="/nyregion" element={ <Fetch api={ nyregion } /> } />
@@ -44,6 +45,7 @@ function SectionRouter () {
                 <Route path="/food" element={ <Fetch api={ food } /> } />
                 <Route path="/travel" element={ <Fetch api={ travel } /> } />
                 <Route path="/magazine" element={ <Fetch api={ magazine } /> } />
+                <Route path="*" element={ <ErrorPage /> } />
             </Routes>
         </div>
 
