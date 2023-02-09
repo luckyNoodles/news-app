@@ -3,7 +3,6 @@ import NavBar from './Components/NavBar.js';
 import SectionRouter from './Components/SectionRouter'; 
 import BackToTop from './Components/BackToTop';
 import Footer from './Components/Footer';
-import Reload from './Components/Reload';
 
 function App() {   
   return (
@@ -23,7 +22,7 @@ function App() {
       </main>
 
       <Footer />
-      <Reload />
+      
     </div>
   );
 }
