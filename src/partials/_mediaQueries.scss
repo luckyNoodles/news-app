@@ -1,0 +1,499 @@
+    // xs (extra small) screens: widths between 320px to 480px 
+    // sm (small) screens: widths between 481px and 767px 
+    // md (medium) screens: widths between 768px and 991px 
+    // lg (large) screens: widths between 992px and 1199px 
+    // xl (extra large) screens: widths of 1200px or greater
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+.App-wrapper {
+    width: 100%;
+}    
+.hamburger {
+        position: relative;
+        .material-symbols-outlined{
+            position: absolute;
+            display: inline-block;
+            top: 10px;
+            left: 15px;
+        }
+        .menu {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    h1 {
+        width: 300px;
+        text-align: center; 
+    }
+    .navBar {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        top: -25px;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+        }
+    .navShow {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        top: 0px;
+        transform: translateX(-3px);
+        transition: transform 0.5s ease-in-out;
+    }
+
+}    
+    
+.menu {
+    display: none;
+}
+
+.storyBox {
+    flex-direction: column;
+    width: 95%;
+    .department {
+        margin: 10px;
+    }
+    .imageContainer {
+        width: 300px;
+        a {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .storyText {
+        .title {
+            h1 {
+                margin: 2px auto;
+                text-align: center;
+            }
+            .byLine {
+                font-size: 0.6rem;
+                // line-height: 0.6rem;
+            }
+
+        }
+    }
+}
+
+} 
+// --- end of 320px -----
+
+@media (min-width: 481px) and (max-width: 767px) {
+.App-wrapper {
+        width: 100%;
+    }
+
+    .hamburger {
+        .material-symbols-outlined {
+            display: inline-block;
+            top: 10px;
+            left: 10px;
+        }
+    }
+
+    .navContainer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .headerTitle {
+            text-align: center;
+        }
+
+        .navBar {
+            flex-direction: column;
+            position: absolute;
+            width: 30%;
+            background-color: white;
+            top: -25px;
+            transform: translateX(-325px);
+            transition: transform 0.5s ease-in-out;
+            li {
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .navShow {
+            flex-wrap: wrap;
+            width: 100%;
+            background-color: white;
+            top: 0px;
+            transform: translateX(-3px);
+            transition: transform 0.5s ease-in-out;
+            height: 35vh;
+        }
+
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .storyComponent {
+        flex-direction: column;
+    }
+
+    .storyBox {
+        flex-direction: column;
+        width: 90%;
+        .department {
+            margin: 5px;
+        }
+        .imageContainer {
+            width: 95%;
+
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .storyText {
+            .title {
+                h3 {
+                    margin: 2px auto;
+                }
+
+                .byLine {
+                    font-size: 0.6rem;
+                    // line-height: 0.6rem;
+                }
+
+            }
+        }
+    }
+
+} 
+// ---------end of 481 to 767 ---------
+
+@media (min-width: 768px) and (max-width: 991px)  {
+
+.hamburger {
+    .material-symbols-outlined {
+        display: inline-block;
+        top: 15px;
+        left: -15px;
+    }
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .headerTitle {
+        text-align: center;
+    }
+    .navBar {
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        top: -25px;
+        transform: translateY(-720px);
+        transition: transform 0.5s ease-in-out;
+        li {
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+    .navShow {
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: white;
+        top: 0px;
+        transform: translateY(10px);
+        transition: transform 0.5s ease-in-out;
+        height: 35vh;
+    }
+}
+
+.menu {
+    display: none;
+}
+
+.storyComponent {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.storyBox {
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+    height: 655px;
+    .imageContainer {
+        width: 95%;
+        a {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .storyText {
+        .title {
+            h3 {
+                margin: 2px auto;
+            }
+            .byLine {
+                font-size: 0.6rem;
+                // line-height: 0.6rem;
+            }
+        }
+    }
+    .department {
+        margin: 10px;
+    }
+}
+
+}
+//-----end 768 to 991 -----------
+
+@media (min-width: 992px) and (max-width: 1199px) {
+.hamburger {
+        .material-symbols-outlined {
+            display: inline-block;
+            top: 10px;
+            left: -30px;
+        }
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .headerTitle {
+        text-align: center;
+    }
+    .navBar {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        top: -25px;
+        transform: translateY(-720px);
+        transition: transform 0.5s ease-in-out;
+        li {
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+    .navShow {
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        transform: translateY(-3px);
+        transition: transform 0.5s ease-in-out;
+        height: 35vh;
+    }
+}
+
+.menu {
+    display: none;
+}
+
+.storyComponent {
+    flex-direction: row;
+    flex-wrap: wrap;
+    .storyBox {
+        width: 30%;
+        margin: 5px;
+        height: 480px;
+        flex-direction: column;
+        .department {
+            display: none;
+        }
+        .imageContainer {
+            width: 90%;
+            margin-top: 15px;
+            align-self: flex-start;
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+            .photoCredit {
+                display: none;
+            }
+        }
+        .storyText {
+            .title {
+                h3 {
+                    margin: 2px auto;
+                }
+                .byLine {
+                    display: none;
+                }
+                .abstract {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
+}
+// ------- end of 992px to 1199px ---------
+
+@media (min-width: 1200px) {
+.menu {
+    display: none;
+}
+
+.headerTitle {
+    border-bottom: 1px solid lightgray;
+}
+
+.navContainer {
+    .doubleHr {
+        width: 100%;
+        align-self: center;
+
+    }
+
+}
+
+.storyBox {
+    .department {
+        display: none;
+    }
+    .imageContainer {
+        width: 90%;
+        margin-top: 15px;
+        align-self: flex-start;
+        a {
+            img {
+                width: 100%;
+            }
+        }
+        .photoCredit {
+            // display: none;
+            margin: 0px;
+        }
+    }
+}
+
+.storyComponent {
+        display: grid;
+        grid-template-columns: [first] 650px [line2] 420px;
+        grid-template-rows: repeat(2, 1fr) auto;
+        align-items:flex-start;
+        
+        .storyBox:nth-child(1) {
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 2;
+                width:98%;
+                height: 650px;
+                flex-direction: column;
+                .imageContainer {
+                    width: 97%;
+                }
+                h3 {
+                    margin: 0px;
+                    font-size: 1rem;
+                }
+
+                .abstract {
+                    font-size: .8rem;
+                }
+                .date,
+                .byLine,
+                .photoCredit {
+                    display: none;
+                }
+            }
+        .storyBox:nth-child(2) {
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+            width: 98%;
+            height: 335px;
+            margin-top: 165px;
+            flex-direction: row;
+            .imageContainer {
+                width: 97%;
+            }
+            .date,
+            .byLine,
+            .photoCredit {
+                display: none;
+            }
+        }
+        .storyBox:nth-child(3),
+        .storyBox:nth-child(4) {
+            grid-column: 2;
+            width: 100%;
+            height:  490px;
+            flex-direction: column;
+            .imageContainer {
+                    width: 90%;
+                    align-self: center;
+                }
+                h3 {
+                    margin: 0px;
+                    font-size: 1rem;
+                }
+                .abstract {
+                    font-size: .8rem;
+                }
+                .date,
+                .byLine,
+                .photoCredit {
+                    display: none;
+                }
+        }
+        .storyBox:nth-child(n+5) {
+            grid-column: 1 / span 2;
+            width: 100%;
+            height: 365px;
+            img {
+                width:450px;
+            }
+            .imageContainer {
+                width: 470px;
+            }
+            .storyText {
+                .title {
+                    h3 {
+                        font-size: 1.7rem;
+                        margin: 2px auto;
+                        text-align: left;
+                    }
+                    .byLine {
+                        display: block;
+                        font-size: 1rem;
+                        text-align: left;
+                    }
+                    .date {
+                        font-size: 1.2rem;
+                        line-height: .6rem;
+                        text-align: left;
+                    }
+                    .abstract {
+                        font-size: 1.2rem;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+}
+
+
+}
+//-------------end 1200px------------------
+
+

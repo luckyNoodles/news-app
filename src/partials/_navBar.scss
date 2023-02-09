@@ -1,0 +1,63 @@
+.headerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 0;
+    h2 {
+        margin: 5px;
+        font-size: 3rem;
+    }
+    .dateTitle {
+        margin-bottom: 30px;
+    }
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-evenly;
+    // border-bottom: 1px double black;
+    border-width: 5px;
+    padding: 0;
+    margin: 3px;
+    li {
+        list-style: none;
+        margin: 5px auto;
+        a {
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            margin: 3px;
+            padding: 2px;
+            font-size: 0.5rem;
+            font-weight: bold;
+        }
+    }
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    .doubleHr {
+        height: 6px;
+        width: 90%;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-bottom: 20px;
+        align-self: center;
+        
+    }
+
+}
+
+.hamburger {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    .material-symbols-outlined,
+    .menu {
+        position: absolute;
+        display: none;
+        top: -30px;
+    }
+}
