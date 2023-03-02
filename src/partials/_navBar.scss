@@ -4,12 +4,12 @@
     align-items: center;
     margin-top: 2%;
     margin-bottom: 0;
-    h2 {
+    h1 {
         margin: 5px;
         font-size: 3rem;
     }
     .dateTitle {
-        margin-bottom: 30px;
+        margin-bottom: 5%;
     }
 }
 
@@ -17,12 +17,12 @@
     display: flex;
     justify-content: space-evenly;
     // border-bottom: 1px double black;
-    border-width: 5px;
+    // border-width: 5px;
     padding: 0;
-    margin: 3px;
+    margin: 1%;
     li {
         list-style: none;
-        margin: 5px auto;
+        // margin: 5px auto;
         a {
             text-decoration: none;
             text-align: center;
