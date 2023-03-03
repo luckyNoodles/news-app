@@ -27,9 +27,9 @@
             text-decoration: none;
             text-align: center;
             color: black;
-            margin: 3px;
-            padding: 2px;
-            font-size: 0.5rem;
+            // margin: 3px;
+            // padding: 2px;
+            font-size: 0.6rem;
             font-weight: bold;
         }
     }
@@ -43,7 +43,7 @@
         width: 90%;
         border-top: 1px solid black;
         border-bottom: 1px solid black;
-        margin-bottom: 20px;
+        margin-bottom: 2.5%;
         align-self: center;
         
     }
@@ -58,6 +58,6 @@
     .menu {
         position: absolute;
         display: none;
-        top: -30px;
+        top: -3vh;
     }
 }
