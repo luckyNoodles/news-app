@@ -12,18 +12,18 @@ main {
 
 .storyBox {
     display: flex;
-    width: 80%;
-    margin: 10px 0 0 0;
+    // width: 80%;
+    // margin: 10px 0 0 0;
     border: 1px solid black;
     box-shadow: 5px 5px 3px grey;
     .imageContainer {
         align-self: center;
-        width: 250px;
+        width: 97%;
   
-        margin: 10px;
+        margin: 1.5%;
         a {
             img {
-                width: 250px;
+                width: 100%;
             }
         }
         .photoCredit {
@@ -33,13 +33,14 @@ main {
     .storyText {
         display: flex;
         flex-direction: column;
+        padding: 2%;
         .department {
             margin: 0;
             text-align: end;
         }
         .title {
-            padding: 10px;
-            text-align: center;
+            padding: 1%;
+            text-align: left;
             .byLine,
             .date {
                 font-size: .7rem;

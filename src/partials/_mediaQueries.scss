@@ -4,7 +4,8 @@
     // lg (large) screens: widths between 992px and 1199px 
     // xl (extra large) screens: widths of 1200px or greater
 
-@media (min-width: 320px) and (max-width: 480px) {
+// @media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
 
 .App-wrapper {
     width: 100%;
@@ -14,13 +15,13 @@
         .material-symbols-outlined{
             position: absolute;
             display: inline-block;
-            top: 10px;
-            left: 15px;
+            top: 30%;
+            left: 60%;
         }
         .menu {
             position: absolute;
-            top: 10px;
-            left: 15px;
+            top: 30%;
+            left: 60%;
         }
 }
 
@@ -29,7 +30,7 @@
     flex-direction: column;
     position: relative;
     h1 {
-        width: 300px;
+        width: 85vw;
         text-align: center; 
     }
     .navBar {
@@ -37,17 +38,21 @@
         position: absolute;
         width: 100%;
         background-color: white;
-        top: -25px;
-        transform: translateX(-500px);
+        top: 0;
+        transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;
         }
     .navShow {
         flex-direction: column;
+        flex-wrap: wrap;
         position: absolute;
         width: 100%;
+        height: 30vh;
+        line-height: 2rem;
+        padding-left: 10%;
         background-color: white;
-        top: 0px;
-        transform: translateX(-3px);
+        top: 0;
+        transform: translateX(-1%);
         transition: transform 0.5s ease-in-out;
     }
 
@@ -60,26 +65,35 @@
 .storyBox {
     flex-direction: column;
     width: 95%;
+    margin: 1%;
     .department {
-        margin: 10px;
+       display: none;
     }
     .imageContainer {
-        width: 300px;
+        max-width: 90%;
         a {
             img {
                 width: 100%;
             }
         }
+        .photoCredit {
+            display: none;
+        }
     }
     .storyText {
         .title {
-            h1 {
+            padding: 5%;
+            h3 {
                 margin: 2px auto;
-                text-align: center;
+                text-align: left;
+                font-size: 1rem;
             }
-            .byLine {
-                font-size: 0.6rem;
-                // line-height: 0.6rem;
+            p{
+                font-size:large
+            }
+            .byLine,
+            .date {
+                display: none;
             }
 
         }
@@ -97,8 +111,8 @@
     .hamburger {
         .material-symbols-outlined {
             display: inline-block;
-            top: 10px;
-            left: 10px;
+            top: 30%;
+            left: 70%;
         }
     }
 
@@ -113,10 +127,10 @@
         .navBar {
             flex-direction: column;
             position: absolute;
-            width: 30%;
+            width: 50%;
             background-color: white;
-            top: -25px;
-            transform: translateX(-325px);
+            top: 2%;
+            transform: translateX(-100%);
             transition: transform 0.5s ease-in-out;
             li {
                 a {
@@ -130,9 +144,11 @@
             width: 100%;
             background-color: white;
             top: 0px;
-            transform: translateX(-3px);
+            transform: translateX(0%);
             transition: transform 0.5s ease-in-out;
-            height: 35vh;
+            height: 25vh;
+            line-height: 2rem;
+            padding-left: 5%;
         }
 
     }
@@ -146,13 +162,14 @@
     }
 
     .storyBox {
-        flex-direction: column;
+        // flex-direction: column;
         width: 90%;
+        margin: .5%;
         .department {
-            margin: 5px;
+            display: none;
         }
         .imageContainer {
-            width: 95%;
+            max-width: 23%;
 
             a {
                 img {
@@ -165,11 +182,15 @@
             .title {
                 h3 {
                     margin: 2px auto;
+                    font-size: 1rem;
+                }
+                .abstract {
+                    font-size: .8rem;
                 }
 
-                .byLine {
-                    font-size: 0.6rem;
-                    // line-height: 0.6rem;
+                .byLine, 
+                .date {
+                    display: none;
                 }
 
             }
@@ -184,8 +205,8 @@
 .hamburger {
     .material-symbols-outlined {
         display: inline-block;
-        top: 15px;
-        left: -15px;
+        top: 60%;
+        left: -50%;
     }
 }
 
@@ -198,10 +219,11 @@
     }
     .navBar {
         flex-direction: column;
+        width: 100%;
         position: absolute;
         background-color: white;
-        top: -25px;
-        transform: translateY(-720px);
+        top: 0;
+        transform: translateY(-110%);
         transition: transform 0.5s ease-in-out;
         li {
             a {
@@ -214,9 +236,10 @@
         width: 100%;
         background-color: white;
         top: 0px;
-        transform: translateY(10px);
+        transform: translateY(5%);
         transition: transform 0.5s ease-in-out;
-        height: 35vh;
+        height: 25vh;
+        line-height: 2rem;
     }
 }
 
@@ -227,13 +250,14 @@
 .storyComponent {
     flex-wrap: wrap;
     flex-direction: row;
+    height: 100%;
 }
 
 .storyBox {
     flex-direction: column;
     width: 45%;
     margin: 10px;
-    height: 655px;
+    min-height: 5.3%;
     .imageContainer {
         width: 95%;
         a {
@@ -243,6 +267,7 @@
         }
     }
     .storyText {
+        padding: 3%;
         .title {
             h3 {
                 margin: 2px auto;
@@ -250,6 +275,9 @@
             .byLine {
                 font-size: 0.6rem;
                 // line-height: 0.6rem;
+            }
+            .date {
+                display: none;
             }
         }
     }
@@ -265,8 +293,8 @@
 .hamburger {
         .material-symbols-outlined {
             display: inline-block;
-            top: 10px;
-            left: -30px;
+            top: 50%;
+            left: -100%;
         }
 }
 
@@ -282,8 +310,8 @@
         position: absolute;
         width: 100%;
         background-color: white;
-        top: -25px;
-        transform: translateY(-720px);
+        top: 0;
+        transform: translateY(-110%);
         transition: transform 0.5s ease-in-out;
         li {
             a {
@@ -297,7 +325,7 @@
         position: absolute;
         width: 100%;
         top: 0px;
-        transform: translateY(-3px);
+        transform: translateY(0%);
         transition: transform 0.5s ease-in-out;
         height: 35vh;
     }
@@ -356,7 +384,7 @@
 }
 
 .headerTitle {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1.5px solid lightgray;
 }
 
 .navContainer {
@@ -373,16 +401,7 @@
         display: none;
     }
     .imageContainer {
-        width: 90%;
-        margin-top: 15px;
-        align-self: flex-start;
-        a {
-            img {
-                width: 100%;
-            }
-        }
         .photoCredit {
-            // display: none;
             margin: 0px;
         }
     }
@@ -390,18 +409,23 @@
 
 .storyComponent {
         display: grid;
-        grid-template-columns: [first] 650px [line2] 420px;
-        grid-template-rows: repeat(2, 1fr) auto;
+        grid-template-columns: [first] 60% [line2] 40%;
+        grid-template-rows: repeat(2, 1fr);
         align-items:flex-start;
-        
+        row-gap: 2px;
+        max-width: 100%;
+
         .storyBox:nth-child(1) {
                 grid-column: 1 / span 1;
                 grid-row: 1 / span 2;
-                width:98%;
-                height: 650px;
+                max-width:98%;
+                height: 60%;
                 flex-direction: column;
+                margin-top: 1%;
                 .imageContainer {
-                    width: 97%;
+                    max-width: 97%;
+                    max-height: auto;
+                    width: 95%;
                 }
                 h3 {
                     margin: 0px;
@@ -421,23 +445,29 @@
             grid-column: 1 / span 1;
             grid-row: 2 / span 1;
             width: 98%;
-            height: 335px;
-            margin-top: 165px;
+            height: 77%;
+            margin-top: 24%;
             flex-direction: row;
+            align-self: flex-end;
             .imageContainer {
-                width: 97%;
+                width: 155%;
             }
-            .date,
-            .byLine,
-            .photoCredit {
-                display: none;
+            .storyText {
+                width: 65%;
+                .date,
+                .byLine,
+                .photoCredit,
+                .abstract {
+                    display: none;
+                }
             }
         }
         .storyBox:nth-child(3),
         .storyBox:nth-child(4) {
             grid-column: 2;
             width: 100%;
-            height:  490px;
+            height:  98%;
+            margin-top: 2%;
             flex-direction: column;
             .imageContainer {
                     width: 90%;
@@ -459,14 +489,16 @@
         .storyBox:nth-child(n+5) {
             grid-column: 1 / span 2;
             width: 100%;
-            height: 365px;
+            height: 97%;
+            margin-top: 1%;
             img {
-                width:450px;
+                width:100%;
             }
             .imageContainer {
-                width: 470px;
+                width: 35%;
             }
             .storyText {
+                width: 65%;
                 .title {
                     h3 {
                         font-size: 1.7rem;
