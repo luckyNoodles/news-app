@@ -49,7 +49,7 @@
         width: 100%;
         height: 30vh;
         line-height: 2rem;
-        padding-left: 5%;
+        padding-left: 10%;
         background-color: white;
         top: 0;
         transform: translateX(-1%);
@@ -63,14 +63,14 @@
 }
 
 .storyBox {
-    // flex-direction: column;
+    flex-direction: column;
     width: 95%;
     margin: 1%;
     .department {
        display: none;
     }
     .imageContainer {
-        max-width: 30%;
+        max-width: 90%;
         a {
             img {
                 width: 100%;
@@ -82,7 +82,8 @@
     }
     .storyText {
         .title {
-            h1 {
+            padding: 5%;
+            h3 {
                 margin: 2px auto;
                 text-align: left;
                 font-size: 1rem;
@@ -147,6 +148,7 @@
             transition: transform 0.5s ease-in-out;
             height: 25vh;
             line-height: 2rem;
+            padding-left: 5%;
         }
 
     }
@@ -167,7 +169,7 @@
             display: none;
         }
         .imageContainer {
-            max-width: 30%;
+            max-width: 23%;
 
             a {
                 img {
@@ -180,6 +182,7 @@
             .title {
                 h3 {
                     margin: 2px auto;
+                    font-size: 1rem;
                 }
                 .abstract {
                     font-size: .8rem;
@@ -247,13 +250,14 @@
 .storyComponent {
     flex-wrap: wrap;
     flex-direction: row;
+    height: 100%;
 }
 
 .storyBox {
     flex-direction: column;
     width: 45%;
     margin: 10px;
-    height: 655px;
+    min-height: 5.3%;
     .imageContainer {
         width: 95%;
         a {
@@ -263,6 +267,7 @@
         }
     }
     .storyText {
+        padding: 3%;
         .title {
             h3 {
                 margin: 2px auto;
@@ -270,6 +275,9 @@
             .byLine {
                 font-size: 0.6rem;
                 // line-height: 0.6rem;
+            }
+            .date {
+                display: none;
             }
         }
     }
@@ -401,7 +409,7 @@
 
 .storyComponent {
         display: grid;
-        grid-template-columns: [first] 55% [line2] 38%;
+        grid-template-columns: [first] 60% [line2] 40%;
         grid-template-rows: repeat(2, 1fr);
         align-items:flex-start;
         row-gap: 2px;

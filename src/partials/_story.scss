@@ -33,13 +33,14 @@ main {
     .storyText {
         display: flex;
         flex-direction: column;
+        padding: 2%;
         .department {
             margin: 0;
             text-align: end;
         }
         .title {
             padding: 1%;
-            text-align: center;
+            text-align: left;
             .byLine,
             .date {
                 font-size: .7rem;
