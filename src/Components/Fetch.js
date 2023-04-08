@@ -15,7 +15,7 @@ function Fetch ( { api } ) {
             setStories(resultsArray.results);
             } 
             catch (error) {
-                console.log(error);
+                alert(`An error occured while fetching data ${error}. Please try again.`);
             }
         } 
         fetchData();
