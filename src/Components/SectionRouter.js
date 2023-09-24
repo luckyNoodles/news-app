@@ -4,7 +4,7 @@ import ErrorPage from './ErrorPage';
 
 function SectionRouter () {
     //nyt Api key    
-    const apiKey = 'n92DZWsbGi92AGqOU61WrbTbzwcLBSKT';
+    const apiKey = process.env.REACT_APP_API_KEY;
     
     //Section urls
     const topStoriesUrl = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`;
