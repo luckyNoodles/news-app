@@ -7,7 +7,7 @@ function SectionRouter () {
     const apiKey = async () => {
         try {
             const response = await fetch(
-              "https://daily-times-headlines.netlify.app/.netlify/functions/getApiKey"
+              "https://daily-times-headlines.netlify.app/.netlify/function/getApiKey"
             );
             if (!response.ok) {
                 throw new Error(response.statusText);
