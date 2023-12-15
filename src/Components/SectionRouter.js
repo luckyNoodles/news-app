@@ -10,7 +10,7 @@ function SectionRouter () {
               "https://daily-times-headlines.netlify.app/.netlify/functions/getApiKey"
             );
             if (!response.ok) {
-                throw new Error(response.statusText);
+                throw new Error("Failed to retrieve API key");
             }
             const data = await response.json();
             const key = data.REACT_APP_API_KEY;

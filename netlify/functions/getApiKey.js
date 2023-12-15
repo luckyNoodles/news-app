@@ -1,4 +1,4 @@
-exports.handler = async (event, context) {
+exports.handler = async (event, context) => {
     try {
         const apiKey = process.env.REACT_APP_API_KEY
         
