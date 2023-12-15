@@ -4,7 +4,22 @@ import ErrorPage from './ErrorPage';
 
 function SectionRouter () {
     //nyt Api key    
-    const apiKey = process.env.REACT_APP_API_KEY;
+    const apiKey = async () => {
+        try {
+            const response = await fetch(
+              "https://daily-times-headlines.netlify.app/.netlify/functions/getApiKey"
+            );
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+            const data = await response.json();
+            const key = data.apiKey;
+            return key;
+        }
+        catch (error) {
+            alert(`An error occured while fetching data ${error}. Please try again.`);
+        }
+    }
     
     //Section urls
     const topStoriesUrl = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`;
