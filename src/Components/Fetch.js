@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
 import Story from "./Story";
 
-function Fetch({ api }) {
+function Fetch({ apiUrl }) {
   const [stories, setStories] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetch(api);
+        const data = await fetch(apiUrl);
         const response = await data.json();
         const resultsArray = response;
 
         setStories(resultsArray.results);
       } catch (error) {
-        alert(
+        console.log(
           `An error occured while fetching data ${error}. Please try again.`
         );
       }
     };
     fetchData();
-  }, [api]);
+  }, [apiUrl]);
 
   return <Story apiData={stories} />;
 }

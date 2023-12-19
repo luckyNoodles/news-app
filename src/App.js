@@ -13,8 +13,8 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          // "http://localhost:8888/.netlify/functions/getApiKey"
-          "https://daily-times-headlines.netlify.app/.netlify/functions/getApiKey"
+          "http://localhost:8888/.netlify/functions/getApiKey"
+          // "https://daily-times-headlines.netlify.app/.netlify/functions/getApiKey"
         );
         const data = await response.json();
         const resApiKey = data.apiKey;

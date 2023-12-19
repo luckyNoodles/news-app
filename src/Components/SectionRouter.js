@@ -5,6 +5,7 @@ import ErrorPage from "./ErrorPage";
 function SectionRouter(props) {
   const { apiKey } = props;
 
+
   //Section urls
   const topStoriesUrl = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`;
   const world = `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${apiKey}`;
@@ -26,8 +27,8 @@ function SectionRouter(props) {
   return (
     <div>
       <Routes>
+        <Route path="/" element={<Fetch apiUrl={topStoriesUrl} />} />
         <Route path="/world" element={<Fetch api={world} />} />
-        <Route path="/" element={<Fetch api={topStoriesUrl} />} />
         <Route path="/us" element={<Fetch api={us} />} />
         <Route path="/politics" element={<Fetch api={politics} />} />
         <Route path="/nyregion" element={<Fetch api={nyregion} />} />
