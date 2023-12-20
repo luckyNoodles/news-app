@@ -1,7 +1,7 @@
 exports.handler = async (event, context) => {
   try {
-    const requestBody = JSON.parse(event.body);
-    const { section } = requestBody;
+    // const requestBody = JSON.parse(event.body);
+    // const { section } = requestBody;
     // const apiKey = process.env.REACT_APP_API_KEY;
 
     // const nytApi = await fetch(
@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
     // );
 
     const nytApi = await fetch(
-      `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=n92DZWsbGi92AGqOU61WrbTbzwcLBSKT`
+      'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=n92DZWsbGi92AGqOU61WrbTbzwcLBSKT'
     );
 
     if (!nytApi.ok) {
