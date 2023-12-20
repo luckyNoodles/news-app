@@ -10,8 +10,8 @@ function Fetch({ apiUrl, section }) {
     const fetchData = async () => {
       try {
         const data = await fetch(apiUrl, {
-          method: "POST",
-          body: JSON.stringify({ section }),
+          method: 'POST',
+          body: JSON.stringify({ section })
         });
 
         if (!data.ok) {
