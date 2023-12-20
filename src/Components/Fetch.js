@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Story from "./Story";
 
-function Fetch({ apiUrl, url }) {
+function Fetch({ apiUrl, section }) {
   const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,7 +11,7 @@ function Fetch({ apiUrl, url }) {
       try {
         const data = await fetch(apiUrl, {
           method: "POST",
-          body: JSON.stringify({ url }),
+          body: JSON.stringify({ section }),
         });
 
         if (!data.ok) {
@@ -29,7 +29,7 @@ function Fetch({ apiUrl, url }) {
     };
 
     fetchData();
-  }, [apiUrl,url]);
+  }, [apiUrl, section]);
 
   if (loading) {
     return <div>Loading...</div>;
