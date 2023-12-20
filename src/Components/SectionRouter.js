@@ -3,8 +3,8 @@ import Fetch from "./Fetch";
 import ErrorPage from "./ErrorPage";
 
 function SectionRouter() {
-  
-  const proxyUrl = "http://localhost:8888/.netlify/functions/nodeProxy";
+
+  const proxyUrl = "https://daily-times-headlines.netlify.app/.netlify/functions/nodeProxy";
 
   return (
     <div>
