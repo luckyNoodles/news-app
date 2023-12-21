@@ -12,11 +12,11 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
+        const response = await fetch('https://daily-times-headlines.netlify.app/.netlify/functions/getApiKey');
           // "http://localhost:8888/.netlify/functions/getApiKey"
-          "https://daily-times-headlines.netlify.app/.netlify/functions/getApiKey"
+          // "https://daily-times-headlines.netlify.app/.netlify/functions/getApiKey"
           // "https://dev-news-app.netlify.app/.netlify/functions/getApiKey"
-        );
+        // );
         const data = await response.json();
         const resApiKey = data.apiKey;
         setApiKey(resApiKey);
