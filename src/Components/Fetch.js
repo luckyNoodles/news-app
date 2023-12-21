@@ -19,7 +19,7 @@ function Fetch({ apiUrl, section }) {
         }
 
         const response = await data.json();
-        console.log(response);
+       
         setStories(response.results);
         setLoading(false);
       } catch (error) {
