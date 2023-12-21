@@ -8,6 +8,10 @@ exports.handler = async (event, context) => {
       `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`
     );
 
+    // const nytApi = await fetch(
+    //   'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=n92DZWsbGi92AGqOU61WrbTbzwcLBSKT'
+    // );
+
     if (!nytApi.ok) {
       throw new Error(
         `Failed to fetch data from NYT API. Status code: ${nytApi.status}`
@@ -18,6 +22,11 @@ exports.handler = async (event, context) => {
 
     return {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin":"https://daily-times-headlines.netlify.app",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, OPTION",
+      },
       body: JSON.stringify(data),
     };
   } catch (error) {
