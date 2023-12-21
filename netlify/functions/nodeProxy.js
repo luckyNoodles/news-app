@@ -6,6 +6,8 @@ exports.handler = async (event, context) => {
 
     const nytApi = await fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apikey}`);
 
+    console.log(nytApi);
+
     if (!nytApi.ok) {
       throw new Error(
         `Failed to fetch data from NYT API. Status code: ${nytApi.status}`
