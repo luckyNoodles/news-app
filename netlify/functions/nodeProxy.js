@@ -8,9 +8,6 @@ exports.handler = async (event, context) => {
       `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apikey}`
     );
 
-    // const nytApi = await fetch(
-    //   'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=n92DZWsbGi92AGqOU61WrbTbzwcLBSKT'
-    // );
 
     if (!nytApi.ok) {
       throw new Error(

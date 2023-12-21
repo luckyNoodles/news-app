@@ -19,6 +19,7 @@ function Fetch({ apiUrl, section, apikey }) {
         }
 
         const response = await data.json();
+       
         setStories(response.results);
         setLoading(false);
       } catch (error) {
