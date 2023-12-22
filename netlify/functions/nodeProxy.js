@@ -2,7 +2,7 @@ exports.handler = async (event, context) => {
   try {
     const requestBody = JSON.parse(event.body);
     const { section, apikey } = requestBody;
-    const apikey = process.env.REACT_APP_API_KEY;
+    // const apikey = process.env.REACT_APP_API_KEY;
 
     const nytApi = await fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apikey}`);
 
