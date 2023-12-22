@@ -3,10 +3,9 @@ exports.handler = async (event, context) => {
     const requestBody = JSON.parse(event.body);
     const { section } = requestBody;
     const apikey = process.env.REACT_APP_API_KEY;
+    
 
     const nytApi = await fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apikey}`);
-
-    console.log(nytApi);
 
     if (!nytApi.ok) {
       throw new Error(
@@ -14,11 +13,11 @@ exports.handler = async (event, context) => {
       );
     }
 
-    const data = await nytApi.json();
+    const response = await nytApi.json();
 
     return {
       statusCode: 200,
-      body: JSON.stringify(data),
+      body: JSON.stringify(response),
     };
   } catch (error) {
     console.error(error);
