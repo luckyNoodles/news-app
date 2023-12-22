@@ -1,14 +1,10 @@
 exports.handler = async (event, context) => {
   try {
-    // const requestBody = JSON.parse(event.body);
-    // const { section, apikey } = requestBody;
-    // const apikey = process.env.REACT_APP_API_KEY;
+    const requestBody = JSON.parse(event.body);
+    const { section } = requestBody;
+    const apikey = process.env.REACT_APP_API_KEY;
 
-    // const nytApi = await fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apikey}`);
-
-    const nytApi = await fetch(
-      `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=n92DZWsbGi92AGqOU61WrbTbzwcLBSKT`
-    );
+    const nytApi = await fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apikey}`);
 
     console.log(nytApi);
 
@@ -28,7 +24,7 @@ exports.handler = async (event, context) => {
     console.error(error);
     return {
       statusCode: 500, // Internal Server Error
-      body: JSON.stringify({ error: "An error occurred" }),
+      body: JSON.stringify({ error: "nodeProxy fetch error" }),
     };
   }
 };
