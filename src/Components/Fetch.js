@@ -15,7 +15,7 @@ function Fetch({ apiUrl, section }) {
         });
 
         if (!data.ok) {
-          throw new Error(`Failed to fetch data. Status code: ${data.status}`);
+          throw new Error(`missing fetch data (1). Status code: ${data.status}`);
         }
 
         const response = await data.json();
@@ -23,7 +23,7 @@ function Fetch({ apiUrl, section }) {
         setStories(response.results);
         setLoading(false);
       } catch (error) {
-        console.error(`An error occurred while fetching data: ${error}`);
+        console.error(`An error occurred while fetching data (2): ${error}`);
         setError(error);
         setLoading(false);
       }
